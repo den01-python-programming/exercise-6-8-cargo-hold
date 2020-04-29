@@ -156,7 +156,7 @@ def main():
     suitcase.add_item(phone)
     suitcase.add_item(brick)
 
-    Item heaviest = suitcase.heaviest_item()
+    heaviest = suitcase.heaviest_item()
     print("Heaviest item: " + heaviest)
 ```
 
