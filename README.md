@@ -47,7 +47,7 @@ Add the following methods to the class:
 
 - Constructor, to which the maximum weight is provided
 
-- The method `def add_item(Item item)`, which adds the item passed as a parameter to the suitcase. The method does not return a value.
+- The method `def add_item(self,item)`, which adds the item passed as a parameter to the suitcase. The method does not return a value.
 
 - The method `def __str__()`, which returns the string "x items (y kg)"
 
