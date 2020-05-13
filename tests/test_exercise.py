@@ -1,9 +1,13 @@
 import pytest
-from src.suitcase import Suitcase
-from src.item import Item
-from src.hold import Hold
+import os
 
 def test_exercise(capsys):
+    os.chdir('src')
+
+    from suitcase import Suitcase
+    from item import Item
+    from hold import Hold
+
     book = Item("The catcher in the rye", 3)
     phone = Item("Nokia 3210", 1)
 
@@ -15,9 +19,10 @@ def test_exercise(capsys):
 
     assert str(suitcase) == "1 items (3 kg)"
 
-    assert suitcase.heaviest_item() == "Nokia 3210 (1 kg)"
+    assert suitcase.heaviest_item() == "The catcher in the rye (3 kg)"
 
     hold = Hold(1000)
+    suitcase.add_item(phone)
     hold.add_suitcase(suitcase)
 
     hold.print_items()
